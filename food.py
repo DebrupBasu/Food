@@ -26,6 +26,7 @@ def main():
     }
     st.markdown("<b>Meal Choice</b>", unsafe_allow_html=True)
     meal_choice = image_select(
+        label = "",
         images=[meal_images[key] for key in meal_images.keys()],
         captions=list(meal_images.keys())
     )
@@ -39,9 +40,9 @@ def main():
             "Lamb": "lamb.jpg",
             "Veggies": "veg.webp"
         }
-
+        st.markdown("<b>Protein Choice</b>", unsafe_allow_html=True)
         protein_choice = image_select(
-            label="Protein Choice",
+            label="",
             images=[protein_images[key] for key in protein_images.keys()],
             captions=list(protein_images.keys())
         )
@@ -60,9 +61,9 @@ def main():
                     "Fry": "fry.jpg",
                     "Slow Cook": "slow.jpg"
                 }
-
+                st.markdown("<b>Cooking Method</b>", unsafe_allow_html=True)
                 cooking_method_choice = image_select(
-                    label="Cooking Method",
+                    label="",
                     images=[cooking_method_images[key] for key in cooking_method_images.keys()],
                     captions=list(cooking_method_images.keys())
                 )
