@@ -2,10 +2,20 @@ import streamlit as st
 from PIL import Image
 import base64
 import io
+import toml
 
+def load_config():
+    try:
+        with open("config.toml", "r") as config_file:
+            config = toml.load(config_file)
+        return config
+    except FileNotFoundError:
+        print("Config file not found.")
+        return None
 
 
 def main():
+    config = load_config()
     st.markdown("""
         <style>
             .intrologo {
