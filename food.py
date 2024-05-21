@@ -15,7 +15,7 @@ def load_config():
 def main():
     config = load_config()
     st.image("Group 265.png")
-    st.title("Berchook AI for Chef Jean-Pierre")
+    st.title("JP AI for Chef Jean-Pierre")
     st.write("Hey there! What’s cookin’? Looking for breakfast, lunch, dinner, or a dessert idea?")
 
     meal_images = {
