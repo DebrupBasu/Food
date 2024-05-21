@@ -31,7 +31,7 @@ def main():
         captions=list(meal_images.keys())
     )
     
-    if caption == "Dinner":
+    if meal_choice == "dinner.jpg":
         st.write("Cool! What are you in the mood for? Chicken, beef, lamb, or veggies?")
         
         protein_images = {
