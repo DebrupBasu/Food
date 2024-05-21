@@ -26,7 +26,7 @@ def main():
     }
 
     meal_choice = image_select(
-        label="Meal Choice",
+        label="**Meal Choice**",
         images=[meal_images[key] for key in meal_images.keys()],
         captions=list(meal_images.keys())
     )
