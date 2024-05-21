@@ -76,7 +76,7 @@ def main():
                     flavors_choice = st.selectbox("Flavors", ["Spicy", "Savory", "Herbal", "Sweet"])
 
                     st.write("What’s in your fridge or pantry? Any specific vegetables you wanna use?")
-                    ingredients = st.text_input("Vegetables", "")
+                    ingredients = st.text_input("Vegetables of your choice", "")
 
                     st.write("How many calories are you aiming for in this meal?")
                     calories = st.number_input("Calories", min_value=0, step=10)
