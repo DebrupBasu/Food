@@ -15,7 +15,7 @@ def load_config():
 def main():
     config = load_config()
     st.image("Group 265.png")
-    st.title("Dinner Chatbot")
+    st.title("Berchook AI for Chef Jean Pierre")
     st.write("Hey there! What’s cookin’? Looking for breakfast, lunch, dinner, or a dessert idea?")
 
     meal_images = {
@@ -47,7 +47,7 @@ def main():
             captions=list(protein_images.keys())
         )
 
-        if protein_choice == "Chicken":
+        if protein_choice == "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp":
             st.write("Got it! How much time do you have to whip up something tasty? Less than 30 mins, 30-60 mins, or more than an hour?")
             cook_time_choice = st.selectbox("Cook Time", ["Less than 30 mins", "30-60 mins", "More than an hour"])
 
@@ -68,7 +68,7 @@ def main():
                     captions=list(cooking_method_images.keys())
                 )
 
-                if cooking_method_choice == "Bake":
+                if cooking_method_choice == "bake.jpg":
                     st.write("Any diet goals or restrictions I should know about? Like keto, gluten-free, vegan, etc.?")
                     diet_restrictions = st.text_input("Diet Restrictions", "")
 
