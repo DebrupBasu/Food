@@ -51,7 +51,7 @@ def main():
 
                     if st.button("Get Dinner Recommendation"):
                         # Recommendation logic based on inputs
-                        recommendation = recommend_dinner(flavors_choice, calories, occasion, ingredients)
+                        recommendation = recommend_dinner(flavors_choice, ingredients, calories, occasion, ingredients)
                         st.write(recommendation)
 
 def recommend_dinner(flavors, servings, calories, occasion, ingredients):
