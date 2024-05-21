@@ -36,9 +36,9 @@ def main():
         
         protein_images = {
             "Beef": "beef.jpg",
-            "Chicken": "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp",
+            "Chicken": "chicken.jpg",
             "Lamb": "lamb.jpg",
-            "Veggies": "veg.webp"
+            "Veggies": "veg.jpg"
         }
         st.markdown("<b>Protein Choice</b>", unsafe_allow_html=True)
         protein_choice = image_select(
@@ -75,8 +75,8 @@ def main():
                     st.write("Sweet! What flavors are you feelin’? Spicy, savory, herbal, or sweet?")
                     flavors_choice = st.selectbox("Flavors", ["Spicy", "Savory", "Herbal", "Sweet"])
 
-                    st.write("What’s in your fridge or pantry? Any specific ingredients you wanna use?")
-                    ingredients = st.text_input("Ingredients", "")
+                    st.write("What’s in your fridge or pantry? Any specific vegetables you wanna use?")
+                    ingredients = st.text_input("Vegetables", "")
 
                     st.write("How many calories are you aiming for in this meal?")
                     calories = st.number_input("Calories", min_value=0, step=10)
