@@ -24,9 +24,9 @@ def main():
         "Dinner": "dinner.jpg",
         "Dessert": "dessert.jpg"
     }
-
+    st.markdown("<b>Meal Choice</b>", unsafe_allow_html=True)
     meal_choice = image_select(
-        label="<b>Meal Choice</b>",
+        label="",
         images=[meal_images[key] for key in meal_images.keys()],
         captions=list(meal_images.keys())
     )
