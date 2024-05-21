@@ -19,7 +19,7 @@ def main():
         </style>
     """, unsafe_allow_html=True)
 
-    img = Image.open("C:\\Users\\Debrup Basu\\Downloads\\Group 262.png")
+    img = Image.open("Group 262.png")
     img = img.convert("RGB")
     image_bytes = io.BytesIO()
     img.save(image_bytes, format="JPEG")
