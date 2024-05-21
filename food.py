@@ -30,8 +30,8 @@ def main():
         images=[meal_images[key] for key in meal_images.keys()],
         captions=list(meal_images.keys())
     )
-
-    if meal_choice == "Dinner":
+    
+    if caption == "Dinner":
         st.write("Cool! What are you in the mood for? Chicken, beef, lamb, or veggies?")
         
         protein_images = {
