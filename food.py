@@ -16,27 +16,7 @@ def load_config():
 
 def main():
     config = load_config()
-    st.markdown("""
-        <style>
-            .intrologo {
-                position: absolute;
-                top: -5px;
-                left: -350px;
-                width: 1200px;
-                height: 750px;
-                border: none; /* This removes the border */
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
-    img = Image.open("Group 262.png")
-    img = img.convert("RGB")
-    image_bytes = io.BytesIO()
-    img.save(image_bytes, format="JPEG")
-    image_base64 = base64.b64encode(image_bytes.getvalue()).decode()
-    # Create a container for the main content and logo
-    main_content_container = st.empty()
-    main_content_container.markdown(f'<img class="intrologo" src="data:image/jpg;base64,{image_base64}">', unsafe_allow_html=True)
+    st.image("Group 265.png")
     st.title("Dinner Chatbot")
     st.write("Hey there! What’s cookin’? Looking for breakfast, lunch, dinner, or a snack idea?")
     meal_choice = st.text_input("Meal Choice", "")
