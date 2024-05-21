@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import toml
+from streamlit_image_select import image_select
 
 def load_config():
     try:
@@ -24,10 +25,13 @@ def main():
         "Dessert": "dessert.jpg"
     }
 
-    meal_choice = st.selectbox("Meal Choice", list(meal_images.keys()), format_func=lambda x: f"{x}  ({meal_images[x]})")
-    st.image(meal_images[meal_choice], use_column_width=True)
+    meal_choice = image_select(
+        label="Meal Choice",
+        images=[meal_images[key] for key in meal_images.keys()],
+        captions=list(meal_images.keys())
+    )
 
-    if meal_choice.lower() == "dinner":
+    if meal_choice == "Dinner":
         st.write("Cool! What are you in the mood for? Chicken, beef, lamb, or veggies?")
         
         protein_images = {
@@ -37,15 +41,18 @@ def main():
             "Veggies": "veg.webp"
         }
 
-        protein_choice = st.selectbox("Protein Choice", list(protein_images.keys()), format_func=lambda x: f"{x}  ({protein_images[x]})")
-        st.image(protein_images[protein_choice], use_column_width=True)
+        protein_choice = image_select(
+            label="Protein Choice",
+            images=[protein_images[key] for key in protein_images.keys()],
+            captions=list(protein_images.keys())
+        )
 
-        if protein_choice.lower() == "chicken":
+        if protein_choice == "Chicken":
             st.write("Got it! How much time do you have to whip up something tasty? Less than 30 mins, 30-60 mins, or more than an hour?")
-            
             cook_time_choice = st.selectbox("Cook Time", ["Less than 30 mins", "30-60 mins", "More than an hour"])
 
-            if cook_time_choice.lower() == "more than an hour":
+
+            if cook_time_choice == "More than an hour":
                 st.write("Awesome. How do you wanna cook it? Bake, grill, fry, or slow cook?")
                 
                 cooking_method_images = {
@@ -55,10 +62,13 @@ def main():
                     "Slow Cook": "slow.jpg"
                 }
 
-                cooking_method_choice = st.selectbox("Cooking Method", list(cooking_method_images.keys()), format_func=lambda x: f"{x}  ({cooking_method_images[x]})")
-                st.image(cooking_method_images[cooking_method_choice], use_column_width=True)
+                cooking_method_choice = image_select(
+                    label="Cooking Method",
+                    images=[cooking_method_images[key] for key in cooking_method_images.keys()],
+                    captions=list(cooking_method_images.keys())
+                )
 
-                if cooking_method_choice.lower() == "bake":
+                if cooking_method_choice == "Bake":
                     st.write("Any diet goals or restrictions I should know about? Like keto, gluten-free, vegan, etc.?")
                     diet_restrictions = st.text_input("Diet Restrictions", "")
 
