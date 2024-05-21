@@ -32,11 +32,11 @@ def main():
     )
     
     if meal_choice == "dinner.jpg":
-        st.write("Cool! What are you in the mood for? Chicken, beef, lamb, or veggies?")
+        st.write("Cool! What are you in the mood for? Beef, chicken, lamb, or veggies?")
         
         protein_images = {
-            "Chicken": "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp",
             "Beef": "beef.jpg",
+            "Chicken": "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp",
             "Lamb": "lamb.jpg",
             "Veggies": "veg.webp"
         }
@@ -53,11 +53,11 @@ def main():
 
 
             if cook_time_choice == "More than an hour":
-                st.write("Awesome. How do you wanna cook it? Bake, grill, fry, or slow cook?")
+                st.write("Awesome. How do you wanna cook it? Grill, bake, fry, or slow cook?")
                 
                 cooking_method_images = {
-                    "Bake": "bake.jpg",
                     "Grill": "grill.jpg",
+                    "Bake": "bake.jpg",
                     "Fry": "fry.jpg",
                     "Slow Cook": "slow.jpg"
                 }
