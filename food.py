@@ -16,19 +16,47 @@ def main():
     st.image("Group 265.png")
     st.title("Dinner Chatbot")
     st.write("Hey there! What’s cookin’? Looking for breakfast, lunch, dinner, or a dessert idea?")
-    meal_choice = st.selectbox("Meal Choice", ["Breakfast", "Lunch", "Dinner", "Dessert"])
+
+    meal_images = {
+        "Breakfast": "breakfast.jpg",
+        "Lunch": "lunch.jpg",
+        "Dinner": "dinner.jpg",
+        "Dessert": "dessert.jpg"
+    }
+
+    meal_choice = st.selectbox("Meal Choice", list(meal_images.keys()), format_func=lambda x: f"{x}  ({meal_images[x]})")
+    st.image(meal_images[meal_choice], use_column_width=True)
 
     if meal_choice.lower() == "dinner":
         st.write("Cool! What are you in the mood for? Chicken, beef, lamb, or veggies?")
-        protein_choice = st.selectbox("Protein Choice", ["Chicken", "Beef", "Lamb", "Veggies"])
+        
+        protein_images = {
+            "Chicken": "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp",
+            "Beef": "beef.jpg",
+            "Lamb": "lamb.jpg",
+            "Veggies": "veg.webp"
+        }
+
+        protein_choice = st.selectbox("Protein Choice", list(protein_images.keys()), format_func=lambda x: f"{x}  ({protein_images[x]})")
+        st.image(protein_images[protein_choice], use_column_width=True)
 
         if protein_choice.lower() == "chicken":
             st.write("Got it! How much time do you have to whip up something tasty? Less than 30 mins, 30-60 mins, or more than an hour?")
+            
             cook_time_choice = st.selectbox("Cook Time", ["Less than 30 mins", "30-60 mins", "More than an hour"])
 
             if cook_time_choice.lower() == "more than an hour":
                 st.write("Awesome. How do you wanna cook it? Bake, grill, fry, or slow cook?")
-                cooking_method_choice = st.selectbox("Cooking Method", ["Bake", "Grill", "Fry", "Slow Cook"])
+                
+                cooking_method_images = {
+                    "Bake": "bake.jpg",
+                    "Grill": "grill.jpg",
+                    "Fry": "fry.jpg",
+                    "Slow Cook": "slow.jpg"
+                }
+
+                cooking_method_choice = st.selectbox("Cooking Method", list(cooking_method_images.keys()), format_func=lambda x: f"{x}  ({cooking_method_images[x]})")
+                st.image(cooking_method_images[cooking_method_choice], use_column_width=True)
 
                 if cooking_method_choice.lower() == "bake":
                     st.write("Any diet goals or restrictions I should know about? Like keto, gluten-free, vegan, etc.?")
