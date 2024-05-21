@@ -35,9 +35,9 @@ def main():
         st.write("Cool! What are you in the mood for? Beef, chicken, lamb, or veggies?")
         
         protein_images = {
-            "Beef": "beef.jpg",
+            "Beef": "beef1.jpg",
             "Chicken": "chicken.jpg",
-            "Lamb": "lamb.jpg",
+            "Lamb": "lamb1.jpg",
             "Veggies": "veg.jpg"
         }
         st.markdown("<b>Protein Choice</b>", unsafe_allow_html=True)
