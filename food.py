@@ -47,7 +47,7 @@ def main():
             captions=list(protein_images.keys())
         )
 
-        if protein_choice == "Best-Roasted-Chicken-Recipe-1080x675.jpg.webp":
+        if protein_choice == "chicken.jpg":
             st.write("Got it! How much time do you have to whip up something tasty? Less than 30 mins, 30-60 mins, or more than an hour?")
             cook_time_choice = st.selectbox("Cook Time", ["Less than 30 mins", "30-60 mins", "More than an hour"])
 
